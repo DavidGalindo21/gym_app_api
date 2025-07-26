@@ -1,0 +1,80 @@
+body{
+    height: 100vh;
+}
+.imgFondo{
+    height: 200px;
+    width: 100%;
+    background-image: url('../img/imgFondo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bkImage{
+        height: 200px;
+    width: 100%;
+    background-image: url('../img/imgFondo.png');
+}
+.imageRutinas{
+    width: 50%;
+    height: 80px;
+    background-image: url('../img/rutinas.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.imageRutinas h3{
+    color: #fff;
+}
+.imageRutinas img{
+    width: 50px;
+    height: 50px;
+}
+.imgFondo h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.activo{
+    margin-left: 10px;
+    background: #56A303;
+}
+h4{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 3px solid rgb(255, 89, 0);
+    width: 70%;
+}
+.vencimiento{
+    color: gray;
+}
+label{
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+input{
+    background: #fff;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.borde{
+    border-radius: 20% 0px 0px 0px;
+}
