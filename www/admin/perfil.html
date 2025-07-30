@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../user/styles/stylesIndex.css" />
+    <title>Perfil</title>
+  </head>
+  <body>
+
+            <nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+     <a class="navbar-brand" href="#">
+      <img src="../img/logo.png" alt="Logo" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="./reportes.html">Reportes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="./clientes.html">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="./admin_couches.html">Couchs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="./membresias.html">Membresías</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-center" href="./perfil.html">Perfil</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="row mt-3">
+    <div class="col-12 bg-white py-5 px-5 borde">
+        <h1 class="text-center">Tu Perfil</h1>
+        <form id="idPerfil">
+            <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" id="telefono" name="telefono" placeholder="4495770766" class="py-1 px-2">
+            </div>
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" class="py-1 px-2">
+            </div>
+            <div class="form-group">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text" id="correo" name="correo" placeholder="correo@dominio.com" class="py-1 px-2">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="********" class="py-1 px-2">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
