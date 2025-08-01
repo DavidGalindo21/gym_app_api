@@ -1,0 +1,349 @@
+/* Variables CSS (opcional, pero útil para mantener consistencia) */
+:root {
+    --primary-text-color: #333;
+    --secondary-text-color: #666;
+    --background-color: #f0f0f0;
+    --card-background: #fff;
+    --border-color: #ddd;
+    --active-status-color: #6cbf4d; /* Un verde similar al del diseño */
+    --inactive-status-color: #f0ad4e; /* Un naranja para cuentas pendientes */
+    --header-height: 180px; /* Altura aproximada del header */
+    --header-content-padding-top: 50px; /* Ajuste para el contenido del header */
+}
+
+/* Estilos globales y reset básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Puedes cambiar por la fuente deseada */
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa toda la altura de la vista */
+    background-color: #2a2a2a; /* Fondo oscuro detrás del header */
+}
+
+
+.logo {
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  position: relative;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  position: fixed;
+  z-index: 10; /* ⬅ más alto que la imagen de fondo */
+}
+
+.card-body p {
+  color: #000;
+}
+
+.nav-link {
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #eccb76 !important;
+}
+
+.titulo {
+  z-index: -1;
+}
+
+.hero-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/* --- Header --- */
+.header {
+    position: relative;
+    width: 100%;
+    height: var(--header-height);
+    overflow: hidden; /* Asegura que la imagen de fondo no se desborde */
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 30%; /* Ajusta la posición de la imagen */
+    filter: brightness(0.5); /* Oscurece la imagen para que el texto resalte */
+}
+
+.header-content {
+    position: relative; /* Para que el contenido esté encima de la imagen de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-content-padding-top) 20px 20px; /* Ajuste para el título y elementos */
+    color: #fff;
+    height: 100%; /* Para centrar verticalmente el contenido dentro del header */
+    box-sizing: border-box; /* Incluir padding en el cálculo de altura */
+}
+
+.app-logo {
+    width: 60px; /* Tamaño del logo */
+    height: 60px;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+.header-content .title {
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+    text-align: center;
+    padding-left: 10px; /* Espacio para el logo */
+    transform: translateY(-10px); /* Ajuste fino de posición del título */
+}
+
+.header-content h1 {
+    font-size: 1.6em; /* Tamaño del título "Inicio Coach" */
+    margin: 0;
+    font-weight: bold;
+}
+
+.menu-icon .menu-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* --- Contenido Principal --- */
+.main-content {
+    background-color: var(--background-color); /* Fondo blanco de la sección principal */
+    flex-grow: 1; /* Ocupa el espacio restante */
+    border-top-left-radius: 20px; /* Bordes redondeados superiores */
+    border-top-right-radius: 20px;
+    margin-top: -30px; /* Superpone un poco sobre el header */
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+    position: relative; /* Para la sombra y z-index */
+    z-index: 1; /* Asegura que esté sobre el header en caso de superposición */
+}
+
+.section-title {
+    font-size: 1.4em;
+    color: var(--primary-text-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos de la lista */
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color); /* Borde claro */
+}
+
+.student-item.active {
+    border-color: #e0e0e0; /* Un borde ligeramente diferente para el activo, si se desea */
+    /* background-color: #f9f9f9; Puedes añadir un fondo más claro si es "activo" */
+}
+
+
+.student-icon {
+    margin-right: 15px;
+    color: var(--primary-text-color); /* Color del icono */
+}
+
+.student-icon svg {
+    width: 30px; /* Tamaño del icono */
+    height: 30px;
+    vertical-align: middle;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name {
+    font-weight: bold;
+    color: var(--primary-text-color);
+    margin-bottom: 3px;
+    font-size: 1.05em;
+}
+
+.student-status {
+    font-size: 0.85em;
+    color: var(--active-status-color); /* Color para "activa" */
+}
+
+/* En caso de que tengas otros estados, puedes añadir clases */
+.student-status.pending {
+    color: var(--inactive-status-color);
+}
+
+/* --- Estilos específicos para "Subir Archivos" --- */
+
+.upload-description {
+    font-size: 1em;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.upload-section {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    text-align: center; /* Para centrar el botón */
+}
+
+.upload-title {
+    font-size: 1.2em;
+    color: var(--primary-text-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left; /* Títulos alineados a la izquierda */
+}
+
+.file-drop-area {
+    border: 2px dashed var(--border-color);
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    position: relative; /* Necesario para posicionar el input file */
+}
+
+.file-drop-area:hover {
+    border-color: #a0a0a0; /* Color al pasar el ratón */
+    background-color: #f5f5f5;
+}
+
+.file-drop-area svg {
+    color: var(--secondary-text-color);
+    margin-bottom: 10px;
+}
+
+.file-placeholder {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.file-input {
+    /* Ocultar el input por defecto y usar la etiqueta customizada */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2; /* Para que el input sea clickeable sobre la etiqueta */
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Para que esté debajo del input pero maneje el contenido visible */
+}
+
+.file-name {
+    display: none; /* Oculto por defecto, se muestra con JS */
+    font-size: 0.95em;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    word-break: break-all; /* Para nombres de archivo largos */
+    padding: 0 10px;
+    text-align: center;
+}
+
+.upload-button {
+    background-color: #000000; /* Color de botón azul, puedes ajustar */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: auto; /* Ancho automático, se ajusta al contenido */
+    display: inline-block; /* Para que el margin-bottom funcione si se hace flex */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.upload-button:hover {
+    background-color: #25a701;
+}
+
+nav{
+  position: fixed;
+}
+  .navbar-collapse {
+    position: absolute;
+    top: 90%; /* justo debajo del navbar */
+    left: 10%;
+    width: 80%;
+    background-color: rgba(255,255,255,.5);
+    backdrop-filter: blur(5px); /* asegúrate que el fondo no sea transparente */
+    z-index: 1000;
+    border-radius: 30px;
+    text-align: center;
+  }
+  .navbar-collapse a{
+    color: #000;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .nav-item{
+    padding: 10px 0px;
+  }
